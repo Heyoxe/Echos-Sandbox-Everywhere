@@ -1,0 +1,11 @@
+# PBOs
+*.pbo
+*.bak
+
+# Addon Signing
+*.biprivatekey
+*.bikey
+*.bisign
+
+# Build
+/temp/**/*

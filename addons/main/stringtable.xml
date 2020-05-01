@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="Echo's Template Mod">
+    <Package name="Core">
+        <Container name="General">
+            <Key ID="STR_ese_main_name">
+                <English>Echo's Sandbox Everywhere</English>
+                <French>Echo's Sandbox Everywhere</French>
+                <Original>Echo's Sandbox Everywhere</Original>
+            </Key>
+            <Key ID="STR_ese_main_zeus">
+                <English>Zeus</English>
+                <French>Zeus</French>
+                <Original>Zeus</Original>
+            </Key>
+            <Key ID="STR_ese_main_jukebox">
+                <English>Music</English>
+                <French>Musique</French>
+                <Original>Music</Original>
+            </Key>
+            <Key ID="STR_ese_main_virtual">
+                <English>Virtual Arsenal</English>
+                <French>Arsenal Virtuel</French>
+                <Original>Virtual Arsenal</Original>
+            </Key>
+            <Key ID="STR_ese_main_misc">
+                <English>Miscelianous</English>
+                <French>Divers</French>
+                <Original>Miscelianous</Original>
+            </Key>
+            <Key ID="STR_ese_main_settings">
+                <English>Help and More</English>
+                <French>Aide et Plus</French>
+                <Original>Help and More</Original>
+            </Key>
+            <Key ID="STR_ese_main_authorName">
+                <English>Name: Heyoxe (Echo)</English>
+                <French>Nom: Heyoxe (Echo)</French>
+                <Original>Name: Heyoxe (Echo)</Original>
+            </Key>
+            <Key ID="STR_ese_main_author">
+                <English>Author</English>
+                <French>Auteur</French>
+                <Original>Author</Original>
+            </Key>
+            <Key ID="STR_ese_main_links">
+                <English>Links</English>
+                <French>Liens</French>
+                <Original>Links</Original>
+            </Key>
+            <Key ID="STR_ese_main_teleport">
+                <English>Teleport</English>
+                <French>Se téléporter</French>
+                <Original>Teleport</Original>
+            </Key>
+            <Key ID="STR_ese_main_virtualGarage">
+                <English>Virtual Garage</English>
+                <French>Garage Virtuel</French>
+                <Original>Virtual Garage</Original>
+            </Key>
+            <Key ID="STR_ese_main_biArsenal">
+                <English>BIS Virtual Arsenal</English>
+                <French>Arsenal Virtuel BIS</French>
+                <Original>BIS Virtual Arsenal</Original>
+            </Key>
+            <Key ID="STR_ese_main_aceArsenal">
+                <English>ACE Virtual Arsenal</English>
+                <French>Arsenal Virtuel ACE</French>
+                <Original>ACE Virtual Arsenal</Original>
+            </Key>
+            <Key ID="STR_ese_main_calm">
+                <English>Calm</English>
+                <French>Calme</French>
+                <Original>Calm</Original>
+            </Key>
+            <Key ID="STR_ese_main_musicSelect">
+                <English>Select music types</English>
+                <French>Sélectionnez des genres de musique</French>
+                <Original>Select music types</Original>
+            </Key>
+            <Key ID="STR_ese_main_add">
+                <English>Add all objects zo Zeus</English>
+                <French>Ajouter tous les objets à Zeus</French>
+                <Original>Add all objects zo Zeus</Original>
+            </Key>
+            <Key ID="STR_ese_main_reloadZeus">
+                <English>Reload Zeus</English>
+                <French>Recharger Zeus</French>
+                <Original>Reload Zeus</Original>
+            </Key>
+            <Key ID="STR_ese_main_zeusRTC">
+                <English>Real-Time Collaboration</English>
+                <French>Collaboration en temps réel</French>
+                <Original>Real-Time Collaboration</Original>
+            </Key>
+            <Key ID="STR_ese_main_SettingsDiscord">
+                <English>Discord</English>
+                <French>Discord</French>
+                <Original>Discord</Original>
+            </Key>
+            <Key ID="STR_ese_main_SettingsGitHub">
+                <English>GitHub Repo</English>
+                <French>Repo GitHub</French>
+                <Original>GitHub Repo</Original>
+            </Key>
+            <Key ID="STR_ese_main_SettingsBIForum">
+                <English>BI Forum Thread</English>
+                <French>Sujet sur les Forum de BI</French>
+                <Original>BI Forum Thread</Original>
+            </Key>
+            <Key ID="STR_ese_main_SettingsSteam">
+                <English>Steam</English>
+                <French>Steam</French>
+                <Original>Steam</Original>
+            </Key>
+            <Key ID="STR_ese_main_SettingsAuthorSteam">
+                <English>Personal Steam</English>
+                <French>Steam Personnel</French>
+                <Original>Personal Steam</Original>
+            </Key>
+            <Key ID="STR_ese_main_SettingsAuthorWebsite">
+                <English>Personal Website</English>
+                <French>Site Web Personnel</French>
+                <Original>Personal Website</Original>
+            </Key>
+            <Key ID="STR_ese_main_SettingsAuthorGithub">
+                <English>Personal GitHub</English>
+                <French>GitHub Personel</French>
+                <Original>Personal GitHub</Original>
+            </Key>
+        </Container>
+    </Package>
+</Project>
