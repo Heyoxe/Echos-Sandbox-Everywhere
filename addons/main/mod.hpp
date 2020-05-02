@@ -7,7 +7,7 @@
 /* I'll need to find a way to automate that, atleast for minor,patch and build/build_hash */
 #define MAJOR 2
 #define MINOR 0
-#define PATCH 0
+#define PATCH 3
 #define BUILD 00000
 #define BUILD_HASH
 
