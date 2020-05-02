@@ -3,23 +3,23 @@ _args params ["_control"];
 
 private _data = switch (_name) do {
 	case "SettingsDiscord": {
-		["Discord", "https://discord.gg/QDGatN2/"];
+		["Discord", "https://discord.gg/QDGatN2"];
 	};
 
 	case "SettingsGitHub": {
-		["GitHub Repo", "https://github.com/Heyoxe/Echos-Sandbox-Everywhere/"];
+		["GitHub Repo", "https://github.com/Heyoxe/Echos-Sandbox-Everywhere"];
 	};
 
 	case "SettingsBIForum": {
-		["BI Forum Thread", "https://forums.bohemia.net/"];
+		["BI Forum Thread", "https://forums.bohemia.net/forums/topic/229039-echos-sandbox-everywhere/"];
 	};
 
 	case "SettingsSteam": {
-		["Steam", "https://steamcommunity.com/id/heyoxe"];
+		["Steam", "https://steamcommunity.com/sharedfiles/filedetails/?id=2081120309"];
 	};
 
 	case "SettingsAuthorSteam": {
-		["Personal Steam", "https://steamcommunity.com/id/heyoxe"];
+		["Personal Steam", "https://steamcommunity.com/id/a3_echo"];
 	};
 
 	case "SettingsAuthorWebsite": {

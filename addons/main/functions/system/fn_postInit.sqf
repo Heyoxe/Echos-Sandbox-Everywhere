@@ -6,8 +6,7 @@ if (hasInterface) then {
 		while { true } do {
 			waitUntil { (inputAction "User13" > 0) && { alive player } && { !dialog } };
 			createDialog "ESE_Main_dialog_MainMenu";
-			systemChat "Menu Opened";
-			uiSleep 1;
+			uiSleep 0.1;
 		};
 	};
 	_this spawn {
@@ -68,3 +67,16 @@ if (!isMultiplayer) then {
 };
 
 missionNamespace setVariable [QVAR(cpostInit), true];
+
+private _first = profileNamespace getVariable ["ESE_main_var_first", true];
+if (_first) then {
+	private _keys = actionKeysNames "User13";
+	private _second = if !(_keys isEqualTo "") then {
+		format ["To open the menu use <t color='#57A0F2'>%1</t><br/>", _keys];
+	} else {
+		""
+	};
+	hint parseText format ["<t size='2'>Hi <t color='#57A0F2'>%1</t></t><br/><t align='left'><t size='1.2'>Thank you for downloading <t color='#57A0F2'>ESE</t>!</t><br/>%2<br/>You can change the key in '<t color='#57A0F2'>Options > Controls > Custom Controls > User Action 13</t>'", profileName, _second];
+	profileNamespace setVariable ["ESE_main_var_first", false];
+	saveProfileNamespace;
+};
