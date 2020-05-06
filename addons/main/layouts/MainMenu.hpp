@@ -352,9 +352,9 @@ class ESE_Main_dialog_SettingsMenu {
 				TEXT(2,0,SettingsInformations,$STR_ese_main_author);
 				TEXT(2,1,SettingsAuthor,$STR_ese_main_authorName);
 				DETAILS(2,2,SettingsAuthorDiscord,"Discord: ","Heyoxe#0557");
-				LINK(2,3,SettingsAuthorWebsite);
-				LINK(2,4,SettingsAuthorGithub);
-				LINK(2,5,SettingsAuthorSteam);
+				// LINK(2,3,SettingsAuthorWebsite);
+				LINK(2,3,SettingsAuthorGithub);
+				LINK(2,4,SettingsAuthorSteam);
 
 				// DETAILS(2,2,SettingsHash,"Hash", "ab43ccd6");
 

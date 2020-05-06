@@ -22,9 +22,9 @@ private _data = switch (_name) do {
 		["Personal Steam", "https://steamcommunity.com/id/a3_echo"];
 	};
 
-	case "SettingsAuthorWebsite": {
-		["Personal Website", "https://wwww.heyoxe.ch/"];
-	};
+	// case "SettingsAuthorWebsite": {
+	// 	["Personal Website", "https://wwww.heyoxe.ch/"];
+	// };
 
 	case "SettingsAuthorGithub": {
 		["Personal GitHub", "https://github.com/Heyoxe"];
