@@ -80,7 +80,7 @@ class ESE_Main_dialog_MainMenu {
 	colorBackgroundActive[] = ESL_TOCOLOR(46,74,104,1); \
 	colorText[] = ESL_TOCOLOR(215,218,224,1); \
 	text = TEXT; \
-	onMouseButtonDown = [[#NAME], _this] call (uiNamespace getVariable ['ESE_Main_fnc_onMouseButtonDown', {}]); \
+	onMouseButtonDown = [[#NAME, 'Action'], _this] call (uiNamespace getVariable ['ESE_Main_fnc_onMouseButtonDown', {}]); \
 }
 
 #define SWITCH(X,Y,NAME,TEXT) class NAME: ESL_Switch { \
@@ -91,7 +91,7 @@ class ESE_Main_dialog_MainMenu {
 	STRings[] = { TEXT }; \
 	checked_STRings[] = { TEXT }; \
 	onLoad = [[#NAME], _this] call (uiNamespace getVariable ['ESE_Main_fnc_onLoad', {}]); \
-	onCheckBoxesSelChanged = [[#NAME], _this] call (uiNamespace getVariable ['ESE_Main_fnc_onCheckBoxesSelChanged', {}]); \
+	onMouseButtonDown = [[#NAME, 'Switch'], _this] call (uiNamespace getVariable ['ESE_Main_fnc_onMouseButtonDown', {}]); \
 }
 
 #define LINK(X,Y,NAME) class NAME: ESL_STRucturedText { \
@@ -301,6 +301,13 @@ class ESE_Main_dialog_MiscMenu {
 			ESL_POSITION(199,378,1523,318);
 			class Controls {
 				ACTION(0,0,MiscTeleport,$STR_ese_main_teleport);
+				SWITCH(0,1,MiscInvincibility,$STR_ese_main_invincibility);
+				SWITCH(0,2,MiscNoFatigue,$STR_ese_main_noFatigue);
+				TEXT(1,0,MiscWeapons,$STR_ese_main_weapons);
+				SWITCH(1,1,MiscUnlimitedAmmo,$STR_ese_main_unlimitedAmmo);
+				SWITCH(1,2,MiscNoRecoil,$STR_ese_main_noRecoil);
+				SWITCH(1,3,MiscRapidFire,$STR_ese_main_rapidFire);
+				SWITCH(1,4,MiscSteadyAim,$STR_ese_main_steadyAim);
 			};
 		};
 	};
@@ -356,10 +363,12 @@ class ESE_Main_dialog_SettingsMenu {
 				LINK(2,3,SettingsAuthorGithub);
 				LINK(2,4,SettingsAuthorSteam);
 
-				// DETAILS(2,2,SettingsHash,"Hash", "ab43ccd6");
+				TEXT(3,0,SettingsHelp,$STR_ese_main_help);
+				ACTION(3,1,SettingsAssign,$STR_ese_main_keys);
 
-				TEXT(3,0,SettingsDebug,"Debug");
-				DETAILS(3,1,SettingsVersion,"Version: ", MAJOR.MINOR.PATCH.BUILD);
+				TEXT(4,0,SettingsDebug,"Debug");
+				DETAILS(4,1,SettingsVersion,"Version: ", MAJOR.MINOR.PATCH);
+				// DETAILS(2,2,SettingsHash,"Hash", "ab43ccd6");
 			};
 		};
 	};

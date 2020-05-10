@@ -53,9 +53,9 @@
                 <Original>Teleport</Original>
             </Key>
             <Key ID="STR_ese_main_virtualGarage">
-                <English>Virtual Garage</English>
-                <French>Garage Virtuel</French>
-                <Original>Virtual Garage</Original>
+                <English>Virtual Garage (Experimental)</English>
+                <French>Garage Virtuel (Expérimental)</French>
+                <Original>Virtual Garage (Experimental)</Original>
             </Key>
             <Key ID="STR_ese_main_biArsenal">
                 <English>BIS Virtual Arsenal</English>
@@ -126,6 +126,51 @@
                 <English>Personal GitHub</English>
                 <French>GitHub Personel</French>
                 <Original>Personal GitHub</Original>
+            </Key>
+            <Key ID="STR_ese_main_invincibility">
+                <English>Invincibility</English>
+                <French>Invincibilité</French>
+                <Original>Invincibility</Original>
+            </Key>
+            <Key ID="STR_ese_main_noFatigue">
+                <English>No Fatigue</English>
+                <French>Endurance Ilimitée</French>
+                <Original>No Fatigue</Original>
+            </Key>
+            <Key ID="STR_ese_main_weapons">
+                <English>Weapons</English>
+                <French>Armes</French>
+                <Original>Weapons</Original>
+            </Key>
+            <Key ID="STR_ese_main_unlimitedAmmo">
+                <English>Unlimited Ammo</English>
+                <French>Munitions Illimitées</French>
+                <Original>Unlimited Ammo</Original>
+            </Key>
+            <Key ID="STR_ese_main_noRecoil">
+                <English>No Recoil</English>
+                <French>Pas de recul</French>
+                <Original>No Recoil</Original>
+            </Key>
+            <Key ID="STR_ese_main_rapidFire">
+                <English>Rapid-Fire</English>
+                <French>Tir rapide</French>
+                <Original>Rapid-Fire</Original>
+            </Key>
+            <Key ID="STR_ese_main_steadyAim">
+                <English>Steady Aim</English>
+                <French>Visée Stable</French>
+                <Original>Steady Aim</Original>
+            </Key>
+            <Key ID="STR_ese_main_help">
+                <English>Help</English>
+                <French>Aide</French>
+                <Original>Help</Original>
+            </Key>
+            <Key ID="STR_ese_main_keys">
+                <English>Keybindings</English>
+                <French>Touches</French>
+                <Original>Keybindings</Original>
             </Key>
         </Container>
     </Package>

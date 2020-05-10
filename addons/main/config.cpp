@@ -43,6 +43,12 @@ class CfgEFunctions {
 
 			class modules {
 				class MiscTeleport {};
+				class MiscInvincibility {};
+				class MiscNoFatigue {};
+				class MiscUnlimitedAmmo {};
+				class MiscNoRecoil {};
+				class MiscRapidFire {};
+				class MiscSteadyAim {};
 
 				class MusicActionAdd {};
 				class MusicCalmAdd {};
@@ -50,6 +56,8 @@ class CfgEFunctions {
 				class MusicLeadAdd {};
 				class MusicSafeAdd {};
 				class MusicStealthAdd {};
+
+				class SettingsAssign {};
 
 				class VirtualACE {};
 				class VirtualBI {};
