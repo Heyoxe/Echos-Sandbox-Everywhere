@@ -34,6 +34,10 @@ class CfgEFunctions {
 				class onLoad {};
 				class onMouseButtonDown {};
 				class onCheckBoxesSelChanged {};
+
+				class onHelpLoad {};
+				class onSLoad {};
+				class onSMouseButtonDown {};
 			};
 
 			class events {
@@ -62,6 +66,7 @@ class CfgEFunctions {
 				class VirtualACE {};
 				class VirtualBI {};
 				class VirtualGarage {};
+				class VirtualDeleteLast {};
 
 				class ZeusAdd {};
 				class ZeusCollaboration {};
@@ -75,14 +80,15 @@ class CfgEFunctions {
 
 class RscButtonMenu;
 class RscStandardDisplay;
+class RscStructuredText;
 
-class RscButtonMenuESE: RscButtonMenu {
+class ESELoader: RscButtonMenu {
 	idc = -1;
 	disabled = 1;
 	text = "Load ESE";
 	tooltip = "Force the loading process of Echo's Sandbox Everywhere";
 	x = "35 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX)";
-	y = "23.0 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))";
+	y = "23 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))";
 	w = "0 * (((safezoneW / safezoneH) min 1.2) / 40)";
 	h = "0 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 	colorBackground[] = { 0, 0, 0, 0 };
@@ -90,20 +96,36 @@ class RscButtonMenuESE: RscButtonMenu {
 	onLoad = "call (uiNamespace getVariable ['ESE_Main_fnc_reInit', {}])";
 };
 
+class ESEHelper: RscStructuredText {
+	idc = -1;
+	disabled = 1;
+	text = "";
+	tooltip = "";
+	x = "10 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX)";
+	y = "23 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))";
+	w = "65 * (((safezoneW / safezoneH) min 1.2) / 40)";
+	h = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+	colorBackground[] = { 0, 0, 0, 0 };
+	onLoad = "_this call (uiNamespace getVariable ['ESE_Main_fnc_onHelpLoad', {}])";
+};
+
 class RscDisplayInterrupt: RscStandardDisplay {
 	class Controls {
-		class ButtonLoadESE: RscButtonMenuESE {};
+		class ButtonLoadESE: ESELoader {};
+		class ButtonHelpESE: ESEHelper {};
 	};
 };
 
 class RscDisplayMovieInterrupt: RscStandardDisplay {
 	class Controls {
-		class ButtonLoadESE: RscButtonMenuESE {};
+		class ButtonLoadESE: ESELoader {};
+		class ButtonHelpESE: ESEHelper {};
 	};
 };
 
 class RscDisplayMPInterrupt: RscStandardDisplay {
 	class Controls {
-		class ButtonLoadESE: RscButtonMenuESE {};
+		class ButtonLoadESE: ESELoader {};
+		class ButtonHelpESE: ESEHelper {};
 	};
 };

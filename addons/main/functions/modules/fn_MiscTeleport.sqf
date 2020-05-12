@@ -12,7 +12,7 @@
           (vehicle player) setPos _pos;
           openMap false;
           if (isMultiplayer) then {
-               (format ['Player %1 has Teleported!', name player]) remoteExec ["systemChat"];
+               (format [localize "STR_ese_main_teleported", name player]) remoteExec ["systemChat"];
           };
      }];
 

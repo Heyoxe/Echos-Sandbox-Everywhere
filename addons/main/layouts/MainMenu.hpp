@@ -94,6 +94,17 @@ class ESE_Main_dialog_MainMenu {
 	onMouseButtonDown = [[#NAME, 'Switch'], _this] call (uiNamespace getVariable ['ESE_Main_fnc_onMouseButtonDown', {}]); \
 }
 
+#define SSWITCH(X,Y,NAME,TEXT) class NAME: ESL_Switch { \
+	x = (X * 311 * safeZoneW) / 1920; \
+	y = (Y * 56 * safeZoneH) / 1080; \
+	w = (279 * safeZoneW) / 1920; \
+	h = (39 * safeZoneH) / 1080; \
+	STRings[] = { TEXT }; \
+	checked_STRings[] = { TEXT }; \
+	onLoad = [[#NAME], _this] call (uiNamespace getVariable ['ESE_Main_fnc_onSLoad', {}]); \
+	onMouseButtonDown = [[#NAME, 'Switch'], _this] call (uiNamespace getVariable ['ESE_Main_fnc_onSMouseButtonDown', {}]); \
+}
+
 #define LINK(X,Y,NAME) class NAME: ESL_STRucturedText { \
 	x = (X * 311 * safeZoneW) / 1920; \
 	y = (Y * 56 * safeZoneH) / 1080; \
@@ -201,12 +212,12 @@ class ESE_Main_dialog_MusicMenu {
 			ESL_POSITION(199,378,1523,318);
 			class Controls {
 				TEXT(0,0,MusicGenres,$STR_ese_main_musicSelect);
-				SWITCH(0,1,MusicActionAdd,"Action");
-				SWITCH(0,2,MusicCalmAdd,"Calm");
-				SWITCH(0,3,MusicCombatAdd,"Combat");
-				SWITCH(0,4,MusicLeadAdd,"Lead");
-				SWITCH(0,5,MusicSafeAdd,"Safe");
-				SWITCH(0,6,MusicStealthAdd,"Stealth");
+				SWITCH(0,1,MusicActionAdd,$STR_ese_main_action);
+				SWITCH(0,2,MusicCalmAdd,$STR_ese_main_calm);
+				SWITCH(0,3,MusicCombatAdd,$STR_ese_main_combat);
+				SWITCH(0,4,MusicLeadAdd,$STR_ese_main_lead);
+				SWITCH(0,5,MusicSafeAdd,$STR_ese_main_safe);
+				SWITCH(0,6,MusicStealthAdd,$STR_ese_main_stealth);
 			};
 		};
 	};
@@ -247,10 +258,23 @@ class ESE_Main_dialog_VirtualMenu {
 			ESL_POSITION(199,378,1523,318);
 			class Controls {
 				ACTION(0,0,VirtualGarage,$STR_ese_main_virtualGarage);
-				ACTION(0,1,VirtualBI,$STR_ese_main_biArsenal);
-				class VirtualACE: ESL_Button { \
+				class VirtualDeleteLast: ESL_Button {
 					x = (0 * 311 * safeZoneW) / 1920;
-					y = (2 * 56 * safeZoneH) / 1080;
+					y = (1 * 56 * safeZoneH) / 1080;
+					w = (279 * safeZoneW) / 1920;
+					h = (39 * safeZoneH) / 1080;
+					colorBackground[] = ESL_TOCOLOR(46,74,104,1);
+					colorFocused[] = ESL_TOCOLOR(46,74,104,1);
+					colorBackgroundActive[] = ESL_TOCOLOR(46,74,104,1);
+					colorText[] = ESL_TOCOLOR(215,218,224,1);
+					text = $STR_ese_main_deleteLast;
+					onLoad = "if ((missionNamespace getVariable ['ESE_Main_var_lastVehicle', objNull]) isEqualTo objNull) then { (_this#0) ctrlEnable false; }";
+					onMouseButtonDown = "[['VirtualDeleteLast'], _this] call (uiNamespace getVariable ['ESE_Main_fnc_onMouseButtonDown', {}])";
+				};
+				ACTION(0,2,VirtualBI,$STR_ese_main_biArsenal);
+				class VirtualACE: ESL_Button {
+					x = (0 * 311 * safeZoneW) / 1920;
+					y = (3 * 56 * safeZoneH) / 1080;
 					w = (279 * safeZoneW) / 1920;
 					h = (39 * safeZoneH) / 1080;
 					colorBackground[] = ESL_TOCOLOR(46,74,104,1);
@@ -354,7 +378,8 @@ class ESE_Main_dialog_SettingsMenu {
 				LINK(0,3,SettingsBIForum);
 				LINK(0,4,SettingsSteam);
 
-				// TEXT(1,0,SettingsSettings,"Settings");
+				TEXT(1,0,SettingsSettings,$STR_ese_main_settingsSettings);
+				SSWITCH(1,1,EscapeMenuText,$STR_ese_main_escapeMenuText);
 
 				TEXT(2,0,SettingsInformations,$STR_ese_main_author);
 				TEXT(2,1,SettingsAuthor,$STR_ese_main_authorName);
@@ -366,7 +391,7 @@ class ESE_Main_dialog_SettingsMenu {
 				TEXT(3,0,SettingsHelp,$STR_ese_main_help);
 				ACTION(3,1,SettingsAssign,$STR_ese_main_keys);
 
-				TEXT(4,0,SettingsDebug,"Debug");
+				TEXT(4,0,SettingsDebug,$STR_ese_main_debug);
 				DETAILS(4,1,SettingsVersion,"Version: ", MAJOR.MINOR.PATCH);
 				// DETAILS(2,2,SettingsHash,"Hash", "ab43ccd6");
 			};

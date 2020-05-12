@@ -172,6 +172,86 @@
                 <French>Touches</French>
                 <Original>Keybindings</Original>
             </Key>
+            <Key ID="STR_ese_main_settingsSettings">
+                <English>Settings</English>
+                <French>Paramètres</French>
+                <Original>Settings</Original>
+            </Key>
+            <Key ID="STR_ese_main_escapeMenuText">
+                <English>Show Escape-Menu Text</English>
+                <French>Montrer l'aide sur le menu de pause</French>
+                <Original>Show Escape-Menu Text</Original>
+            </Key>
+            <Key ID="STR_ese_main_deleteLast">
+                <English>Delete last vehicle</English>
+                <French>Supprimer dernier véhicule</French>
+                <Original>Delete last vehicle</Original>
+            </Key>
+            <Key ID="STR_ese_main_action">
+                <English>Action</English>
+                <French>Action</French>
+                <Original>Action</Original>
+            </Key>
+            <Key ID="STR_ese_main_combat">
+                <English>Combat</English>
+                <French>Combat</French>
+                <Original>Combat</Original>
+            </Key>
+            <Key ID="STR_ese_main_lead">
+                <English>Lead</English>
+                <French>Principale</French>
+                <Original>Lead</Original>
+            </Key>
+            <Key ID="STR_ese_main_safe">
+                <English>Safe</English>
+                <French>Sûr</French>
+                <Original>Safe</Original>
+            </Key>
+            <Key ID="STR_ese_main_stealth">
+                <English>Stealth</English>
+                <French>Furtif</French>
+                <Original>Stealth</Original>
+            </Key>
+            <Key ID="STR_ese_main_debug">
+                <English>Debugging</English>
+                <French>Débogage</French>
+                <Original>Debugging</Original>
+            </Key>
+            <Key ID="STR_ese_main_welcome">
+                <English>&lt;t size='2'&gt;Hi &lt;t color='#57A0F2'&gt;%1&lt;/t&gt;&lt;/t&gt;&lt;br/&gt;&lt;t align='left'&gt;&lt;t size='1.2'&gt;Thank you for downloading &lt;t color='#57A0F2'&gt;ESE&lt;/t&gt;!&lt;/t&gt;&lt;br/&gt;%2&lt;br/&gt;You can change the key in '&lt;t color='#57A0F2'&gt;Options &gt; Controls &gt; Custom Controls &gt; User Action 13&lt;/t&gt;'</English>
+                <Original>&lt;t size='2'&gt;Hi &lt;t color='#57A0F2'&gt;%1&lt;/t&gt;&lt;/t&gt;&lt;br/&gt;&lt;t align='left'&gt;&lt;t size='1.2'&gt;Thank you for downloading &lt;t color='#57A0F2'&gt;ESE&lt;/t&gt;!&lt;/t&gt;&lt;br/&gt;%2&lt;br/&gt;You can change the key in '&lt;t color='#57A0F2'&gt;Options &gt; Controls &gt; Custom Controls &gt; User Action 13&lt;/t&gt;'</Original>
+                <French>&lt;t size='2'&gt;Bienvenue &lt;t color='#57A0F2'&gt;%1&lt;/t&gt;&lt;/t&gt;&lt;br/&gt;&lt;t align='left'&gt;&lt;t size='1.2'&gt;Merci d'avoir téléchargé &lt;t color='#57A0F2'&gt;ESE&lt;/t&gt;!&lt;/t&gt;&lt;br/&gt;%2&lt;br/&gt;Vous pouvez changer la touche du menu dans '&lt;t color='#57A0F2'&gt;Options &gt; Commandes &gt; Commandes personnalisées &gt; Util. action 13&lt;/t&gt;'</French>
+            </Key>
+            <Key ID="STR_ese_main_teleported">
+                <English>Player %1 has Teleported!</English>
+                <French>Le joueur %1 s'est téléporté!</French>
+                <Original>Player %1 has Teleported!</Original>
+            </Key>
+            <Key ID="STR_ese_main_vehicleMustEmpty">
+                <English>The Vehicle must be empty!</English>
+                <French>Le véhicule doit être vide!</French>
+                <Original>The Vehicle must be empty!</Original>
+            </Key>
+            <Key ID="STR_ese_main_vehicleDeleted">
+                <English>The vehicle has been deleted!</English>
+                <French>Le véhicule a été supprimé</French>
+                <Original>The vehicle has been deleted!</Original>
+            </Key>
+            <Key ID="STR_ese_main_helpLoadFirst">
+                <English>To open the &lt;t color='#57A0F2'&gt;Echo's Sandbox Everywhere&lt;/t&gt;'s menu use &lt;t color='#57A0F2'&gt;%1&lt;/t&gt;. </English>
+                <Original>To open the &lt;t color='#57A0F2'&gt;Echo's Sandbox Everywhere&lt;/t&gt;'s menu use &lt;t color='#57A0F2'&gt;%1&lt;/t&gt;. </Original>
+                <French>Pour ouvrir le menu de &lt;t color='#57A0F2'&gt;Echo's Sandbox Everywhere&lt;/t&gt; utilisez &lt;t color='#57A0F2'&gt;%1&lt;/t&gt;. </French>
+            </Key>
+            <Key ID="STR_ese_main_helpLoadSecond">
+                <English>%1You can change the &lt;t color='#57A0F2'&gt;Echo's Sandbox Everywhere&lt;/t&gt;'s menu key in '&lt;t color='#57A0F2'&gt;Options &gt; Controls &gt; Custom Controls &gt; User Action 13&lt;/t&gt;'</English>
+                <Original>%1You can change the &lt;t color='#57A0F2'&gt;Echo's Sandbox Everywhere&lt;/t&gt;'s menu key in '&lt;t color='#57A0F2'&gt;Options &gt; Controls &gt; Custom Controls &gt; User Action 13&lt;/t&gt;'</Original>
+                <French>%1Vous pouvez changer la touche qu'&lt;t color='#57A0F2'&gt;Echo's Sandbox Everywhere&lt;/t&gt; utilise dans '&lt;t color='#57A0F2'&gt;Options &gt; Commandes &gt; Commandes personnalisées &gt; Util. action 13&lt;/t&gt;'</French>
+            </Key>
+            <Key ID="STR_ese_main_openMenuBR">
+                <English>To open the menu use &lt;t color='#57A0F2'&gt;%1&lt;/t&gt;. </English>
+                <French>Pour ouvrir le menu utilisez &lt;t color='#57A0F2'&gt;%1&lt;/t&gt;. </French>
+                <Original>To open the menu use &lt;t color='#57A0F2'&gt;%1&lt;/t&gt;. </Original>
+            </Key>
         </Container>
     </Package>
 </Project>

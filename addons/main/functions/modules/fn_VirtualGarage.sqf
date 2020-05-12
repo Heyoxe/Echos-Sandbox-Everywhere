@@ -35,4 +35,5 @@
     {
         _veh setObjectTextureGlobal [_forEachIndex, _x];
     } forEach _addedVariant;
+    missionNamespace setVariable ["ESE_Main_var_lastVehicle", _veh];
 };
