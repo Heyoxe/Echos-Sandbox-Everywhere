@@ -6,4 +6,4 @@
 #include "\e\echos_shared_library\addons\core\config_macros.hpp"
 #include "\e\echos_shared_library\addons\core\script_macros.hpp"
 
-#define DEBUG_LEVEL DEBUG
+#define DEBUG_LEVEL ERROR
