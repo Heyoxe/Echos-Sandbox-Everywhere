@@ -380,6 +380,7 @@ class ESE_Main_dialog_SettingsMenu {
 
 				TEXT(1,0,SettingsSettings,$STR_ese_main_settingsSettings);
 				SSWITCH(1,1,EscapeMenuText,$STR_ese_main_escapeMenuText);
+				SSWITCH(1,2,MPTeleportMessage,$STR_ese_main_MPTeleportMessage);
 
 				TEXT(2,0,SettingsInformations,$STR_ese_main_author);
 				TEXT(2,1,SettingsAuthor,$STR_ese_main_authorName);

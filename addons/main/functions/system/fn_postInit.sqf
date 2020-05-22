@@ -2,47 +2,51 @@
 #include "\e\echos_shared_library\addons\core\script_macros.hpp"
 
 if (hasInterface) then {
-	/* Key Handling */
 	_this spawn {
-		while { true } do {
-			waitUntil { (inputAction "User13" > 0) && { alive player } && { !dialog } };
-			createDialog "ESE_Main_dialog_MainMenu";
-			uiSleep 0.1;
-		};
-	};
+		waitUntil { missionNamespace getVariable ["ESE_main_var_serverReady", false] };
 
-	/* Music */
-	_this spawn {
-		addMusicEventHandler ["MusicStop", { missionNamespace setVariable ["ESE_Main_var_MusicStopped", true, false] }];
-		while { true } do {
-			waitUntil {
-				private _musicSelection = missionNamespace getVariable ["ESE_Main_var_MusicSelection", []];
-				(count _musicSelection) > 0	
+		/* Key Handling */
+		_this spawn {
+			while { true } do {
+				waitUntil { (inputAction "User13" > 0) && { alive player } && { !dialog } };
+				createDialog "ESE_Main_dialog_MainMenu";
+				uiSleep 0.1;
 			};
-			private _musicSelection = missionNamespace getVariable ["ESE_Main_var_MusicSelection", []];
-			private _selectionSize = count _musicSelection;
-			private _randomClass = _musicSelection#(floor (random _selectionSize));
-			playMusic _randomClass;
-			3 fadeMusic 1;
-			missionNamespace setVariable ["ESE_Main_var_MusicStopped", false];
-			waitUntil {
-				private _musicStopped = missionNamespace getVariable ["ESE_Main_var_MusicStopped", false];
-				private _musicSelection = missionNamespace getVariable ["ESE_Main_var_MusicSelection", []];
-				(_musicStopped) || ((count _musicSelection) isEqualTo 0)
-			};
-			3 fadeMusic 0;
-			missionNamespace setVariable ["ESE_Main_var_MusicStopped", true, false];
-			uiSleep 3;
-			playMusic "";
 		};
-	};
 
-	/* Zeus RTC */
-	{
-		_x addEventHandler ["CuratorObjectPlaced", {   
-			_this remoteExec ["ESE_Main_fnc_onCuratorObjectPlaced", 0];
-		}];
-	} forEach allCurators;
+		/* Music */
+		_this spawn {
+			addMusicEventHandler ["MusicStop", { missionNamespace setVariable ["ESE_Main_var_MusicStopped", true, false] }];
+			while { true } do {
+				waitUntil {
+					private _musicSelection = missionNamespace getVariable ["ESE_Main_var_MusicSelection", []];
+					(count _musicSelection) > 0	
+				};
+				private _musicSelection = missionNamespace getVariable ["ESE_Main_var_MusicSelection", []];
+				private _selectionSize = count _musicSelection;
+				private _randomClass = _musicSelection#(floor (random _selectionSize));
+				playMusic _randomClass;
+				3 fadeMusic 1;
+				missionNamespace setVariable ["ESE_Main_var_MusicStopped", false];
+				waitUntil {
+					private _musicStopped = missionNamespace getVariable ["ESE_Main_var_MusicStopped", false];
+					private _musicSelection = missionNamespace getVariable ["ESE_Main_var_MusicSelection", []];
+					(_musicStopped) || ((count _musicSelection) isEqualTo 0)
+				};
+				3 fadeMusic 0;
+				missionNamespace setVariable ["ESE_Main_var_MusicStopped", true, false];
+				uiSleep 3;
+				playMusic "";
+			};
+		};
+
+		/* Zeus RTC */
+		{
+			_x addEventHandler ["CuratorObjectPlaced", {   
+				_this remoteExec ["ESE_Main_fnc_onCuratorObjectPlaced", 0];
+			}];
+		} forEach allCurators;
+	};
 };
 
 
@@ -71,6 +75,7 @@ if (isServer) then {
 			uiSleep 5;
 		};
 	};
+	missionNamespace setVariable ["ESE_main_var_serverReady", true, true];
 };
 
 missionNamespace setVariable [QVAR(cpostInit), true];

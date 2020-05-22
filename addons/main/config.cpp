@@ -43,6 +43,7 @@ class CfgEFunctions {
 			class events {
 				class onCuratorObjectPlaced {};
 				class onMusicSelChanged {};
+				class onTeleport {};
 			};
 
 			class modules {

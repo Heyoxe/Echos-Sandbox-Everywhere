@@ -252,6 +252,11 @@
                 <French>Pour ouvrir le menu utilisez &lt;t color='#57A0F2'&gt;%1&lt;/t&gt;. </French>
                 <Original>To open the menu use &lt;t color='#57A0F2'&gt;%1&lt;/t&gt;. </Original>
             </Key>
+            <Key ID="STR_ese_main_MPTeleportMessage">
+                <English>Recieve teleportation notifications</English>
+                <French>Recevoir les notifications de téléportation</French>
+                <Original>Recieve teleportation notifications</Original>
+            </Key>
         </Container>
     </Package>
 </Project>
