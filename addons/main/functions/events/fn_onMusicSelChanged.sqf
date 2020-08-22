@@ -16,4 +16,4 @@ private _selected = [];
 } forEach _types;
 
 private _names = _selected apply { _x#0 };
-missionNamespace setVariable ["ESE_Main_var_MusicSelection", _names, false];
+missionNamespace setVariable ["ESE_main_var_musicSelection", _names, false];

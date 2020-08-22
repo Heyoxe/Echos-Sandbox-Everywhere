@@ -35,6 +35,8 @@
 		}; \
 	}
 
+class RscCombo;
+
 class ESE_Main_dialog_MainMenu {
 	idd = 283927;
 	class Controls {
@@ -81,6 +83,16 @@ class ESE_Main_dialog_MainMenu {
 	colorText[] = ESL_TOCOLOR(215,218,224,1); \
 	text = TEXT; \
 	onMouseButtonDown = [[#NAME, 'Action'], _this] call (uiNamespace getVariable ['ESE_Main_fnc_onMouseButtonDown', {}]); \
+}
+
+#define COMBO(X,Y,NAME) class NAME: RscCombo { \
+	idc = -1; \
+	x = (X * 311 * safeZoneW) / 1920; \
+	y = (Y * 56 * safeZoneH) / 1080; \
+	w = (256 * safeZoneW) / 1920; \
+	h = (24 * safeZoneH) / 1080; \
+	onLoad = [[#NAME], _this] call (uiNamespace getVariable ['ESE_Main_fnc_onCLoad', {}]); \
+	onLBSelChanged = [[#NAME], _this] call (uiNamespace getVariable ['ESE_Main_fnc_onLBSelChanged', {}]); \
 }
 
 #define SWITCH(X,Y,NAME,TEXT) class NAME: ESL_Switch { \
@@ -381,6 +393,8 @@ class ESE_Main_dialog_SettingsMenu {
 				TEXT(1,0,SettingsSettings,$STR_ese_main_settingsSettings);
 				SSWITCH(1,1,EscapeMenuText,$STR_ese_main_escapeMenuText);
 				SSWITCH(1,2,MPTeleportMessage,$STR_ese_main_MPTeleportMessage);
+				TEXT(1,3,EseKey,$STR_ese_main_key);
+				COMBO(1,4,KeySelect);
 
 				TEXT(2,0,SettingsInformations,$STR_ese_main_author);
 				TEXT(2,1,SettingsAuthor,$STR_ese_main_authorName);

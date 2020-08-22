@@ -218,9 +218,9 @@
                 <Original>Debugging</Original>
             </Key>
             <Key ID="STR_ese_main_welcome">
-                <English>&lt;t size='2'&gt;Hi &lt;t color='#57A0F2'&gt;%1&lt;/t&gt;&lt;/t&gt;&lt;br/&gt;&lt;t align='left'&gt;&lt;t size='1.2'&gt;Thank you for downloading &lt;t color='#57A0F2'&gt;ESE&lt;/t&gt;!&lt;/t&gt;&lt;br/&gt;%2&lt;br/&gt;You can change the key in '&lt;t color='#57A0F2'&gt;Options &gt; Controls &gt; Custom Controls &gt; User Action 13&lt;/t&gt;'</English>
-                <Original>&lt;t size='2'&gt;Hi &lt;t color='#57A0F2'&gt;%1&lt;/t&gt;&lt;/t&gt;&lt;br/&gt;&lt;t align='left'&gt;&lt;t size='1.2'&gt;Thank you for downloading &lt;t color='#57A0F2'&gt;ESE&lt;/t&gt;!&lt;/t&gt;&lt;br/&gt;%2&lt;br/&gt;You can change the key in '&lt;t color='#57A0F2'&gt;Options &gt; Controls &gt; Custom Controls &gt; User Action 13&lt;/t&gt;'</Original>
-                <French>&lt;t size='2'&gt;Bienvenue &lt;t color='#57A0F2'&gt;%1&lt;/t&gt;&lt;/t&gt;&lt;br/&gt;&lt;t align='left'&gt;&lt;t size='1.2'&gt;Merci d'avoir téléchargé &lt;t color='#57A0F2'&gt;ESE&lt;/t&gt;!&lt;/t&gt;&lt;br/&gt;%2&lt;br/&gt;Vous pouvez changer la touche du menu dans '&lt;t color='#57A0F2'&gt;Options &gt; Commandes &gt; Commandes personnalisées &gt; Util. action 13&lt;/t&gt;'</French>
+                <English>&lt;t size='2'&gt;Hi &lt;t color='#57A0F2'&gt;%1&lt;/t&gt;&lt;/t&gt;&lt;br/&gt;&lt;t align='left'&gt;&lt;t size='1.2'&gt;Thank you for downloading &lt;t color='#57A0F2'&gt;ESE&lt;/t&gt;!&lt;/t&gt;&lt;br/&gt;%2&lt;br/&gt;You can change the key in '&lt;t color='#57A0F2'&gt;Options &gt; Controls &gt; Custom Controls &gt; %3&lt;/t&gt;'</English>
+                <Original>&lt;t size='2'&gt;Hi &lt;t color='#57A0F2'&gt;%1&lt;/t&gt;&lt;/t&gt;&lt;br/&gt;&lt;t align='left'&gt;&lt;t size='1.2'&gt;Thank you for downloading &lt;t color='#57A0F2'&gt;ESE&lt;/t&gt;!&lt;/t&gt;&lt;br/&gt;%2&lt;br/&gt;You can change the key in '&lt;t color='#57A0F2'&gt;Options &gt; Controls &gt; Custom Controls &gt; %3&lt;/t&gt;'</Original>
+                <French>&lt;t size='2'&gt;Bienvenue &lt;t color='#57A0F2'&gt;%1&lt;/t&gt;&lt;/t&gt;&lt;br/&gt;&lt;t align='left'&gt;&lt;t size='1.2'&gt;Merci d'avoir téléchargé &lt;t color='#57A0F2'&gt;ESE&lt;/t&gt;!&lt;/t&gt;&lt;br/&gt;%2&lt;br/&gt;Vous pouvez changer la touche du menu dans '&lt;t color='#57A0F2'&gt;Options &gt; Commandes &gt; Commandes personnalisées &gt; %3&lt;/t&gt;'</French>
             </Key>
             <Key ID="STR_ese_main_teleported">
                 <English>Player %1 has Teleported!</English>
@@ -243,9 +243,9 @@
                 <French>Pour ouvrir le menu de &lt;t color='#57A0F2'&gt;Echo's Sandbox Everywhere&lt;/t&gt; utilisez &lt;t color='#57A0F2'&gt;%1&lt;/t&gt;. </French>
             </Key>
             <Key ID="STR_ese_main_helpLoadSecond">
-                <English>%1You can change the &lt;t color='#57A0F2'&gt;Echo's Sandbox Everywhere&lt;/t&gt;'s menu key in '&lt;t color='#57A0F2'&gt;Options &gt; Controls &gt; Custom Controls &gt; User Action 13&lt;/t&gt;'</English>
-                <Original>%1You can change the &lt;t color='#57A0F2'&gt;Echo's Sandbox Everywhere&lt;/t&gt;'s menu key in '&lt;t color='#57A0F2'&gt;Options &gt; Controls &gt; Custom Controls &gt; User Action 13&lt;/t&gt;'</Original>
-                <French>%1Vous pouvez changer la touche qu'&lt;t color='#57A0F2'&gt;Echo's Sandbox Everywhere&lt;/t&gt; utilise dans '&lt;t color='#57A0F2'&gt;Options &gt; Commandes &gt; Commandes personnalisées &gt; Util. action 13&lt;/t&gt;'</French>
+                <English>%1You can change the &lt;t color='#57A0F2'&gt;Echo's Sandbox Everywhere&lt;/t&gt;'s menu key in '&lt;t color='#57A0F2'&gt;Options &gt; Controls &gt; Custom Controls &gt; %2&lt;/t&gt;'</English>
+                <Original>%1You can change the &lt;t color='#57A0F2'&gt;Echo's Sandbox Everywhere&lt;/t&gt;'s menu key in '&lt;t color='#57A0F2'&gt;Options &gt; Controls &gt; Custom Controls &gt; %2&lt;/t&gt;'</Original>
+                <French>%1Vous pouvez changer la touche qu'&lt;t color='#57A0F2'&gt;Echo's Sandbox Everywhere&lt;/t&gt; utilise dans '&lt;t color='#57A0F2'&gt;Options &gt; Commandes &gt; Commandes personnalisées &gt; %2&lt;/t&gt;'</French>
             </Key>
             <Key ID="STR_ese_main_openMenuBR">
                 <English>To open the menu use &lt;t color='#57A0F2'&gt;%1&lt;/t&gt;. </English>
@@ -257,6 +257,31 @@
                 <French>Recevoir les notifications de téléportation</French>
                 <Original>Recieve teleportation notifications</Original>
             </Key>
+			<Key ID="STR_ese_main_serverNotReady">
+                <English>&lt;t color='#57A0F2' size='1.2'&gt;ESE&lt;/t&gt;&lt;br/&gt;It seems that the server is not ready yet, please wait...</English>
+                <French>&lt;t color='#57A0F2' size='1.2'&gt;ESE&lt;/t&gt;&lt;br/&gt;Il semble que le serveur ne soit pas encore prêt, veuillez patienter...</French>
+                <Original>&lt;t color='#57A0F2' size='1.2'&gt;ESE&lt;/t&gt;&lt;br/&gt;It seems that the server is not ready yet, please wait...</Original>
+            </Key>
+			<Key ID="STR_ese_main_serverNotReady">
+                <English>&lt;t color='#57A0F2' size='1.2'&gt;ESE&lt;/t&gt;&lt;br/&gt;The server is ready, you can now use &lt;t color='#57A0F2'&gt;ESE&lt;/t&gt;!</English>
+                <French>&lt;t color='#57A0F2' size='1.2'&gt;ESE&lt;/t&gt;&lt;br/&gt;Le serveur est prêt, vous pouvez maintenant utiliser &lt;t color='#57A0F2'&gt;ESE&lt;/t&gt;!</French>
+                <Original>&lt;t color='#57A0F2' size='1.2'&gt;ESE&lt;/t&gt;&lt;br/&gt;The server is ready, you can now use &lt;t color='#57A0F2'&gt;ESE&lt;/t&gt;!</Original>
+            </Key>
+			<Key ID="STR_ese_main_key">
+				<English>Key:</English>
+                <French>Touche:</French>
+                <Original>Key:</Original>
+			</Key>
+			<Key ID="STR_ese_main_keyChanged">
+				<English>&lt;t color='#57A0F2' size='1.2'&gt;ESE&lt;/t&gt;&lt;br/&gt;You changed the ESE Action to '&lt;t color='#57A0F2'&gt;%1&lt;/t&gt;' (&lt;t color='#57A0F2'&gt;%2&lt;/t&gt;)&lt;br/&gt;It was previously set to '&lt;t color='#57A0F2'&gt;%3&lt;/t&gt;' (&lt;t color='#57A0F2'&gt;%4&lt;/t&gt;)</English>
+                <French>&lt;t color='#57A0F2' size='1.2'&gt;ESE&lt;/t&gt;&lt;br/&gt;Vous avez changé la touche d'ESE pour '&lt;t color='#57A0F2'&gt;%1&lt;/t&gt;' (&lt;t color='#57A0F2'&gt;%2&lt;/t&gt;)&lt;br/&gt;Elle était avant assignée à '&lt;t color='#57A0F2'&gt;%3&lt;/t&gt;' (&lt;t color='#57A0F2'&gt;%4&lt;/t&gt;)</French>
+                <Original>&lt;t color='#57A0F2' size='1.2'&gt;ESE&lt;/t&gt;&lt;br/&gt;You changed the ESE Action to '&lt;t color='#57A0F2'&gt;%1&lt;/t&gt;' (&lt;t color='#57A0F2'&gt;%2&lt;/t&gt;)&lt;br/&gt;It was previously set to '&lt;t color='#57A0F2'&gt;%3&lt;/t&gt;' (&lt;t color='#57A0F2'&gt;%4&lt;/t&gt;)</Original>
+			</Key>
+			<Key ID="STR_ese_main_notAssigned">
+				<English>%1lt;Not assigned%1gt;</English>
+                <French>%1lt;Non assigné%1gt;</French>
+                <Original>%1lt;Not assigned%1gt;</Original>
+			</Key>
         </Container>
     </Package>
 </Project>

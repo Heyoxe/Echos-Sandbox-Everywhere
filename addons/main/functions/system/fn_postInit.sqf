@@ -3,38 +3,43 @@
 
 if (hasInterface) then {
 	_this spawn {
-		waitUntil { missionNamespace getVariable ["ESE_main_var_serverReady", false] };
-
 		/* Key Handling */
-		_this spawn {
+		private _handle = _this spawn {
 			while { true } do {
-				waitUntil { (inputAction "User13" > 0) && { alive player } && { !dialog } };
-				createDialog "ESE_Main_dialog_MainMenu";
+				waitUntil { (inputAction (profileNamespace getVariable ["ESE_main_var_userAction", "User13"]) > 0) && { alive player } && { !dialog } };
+				if !(missionNamespace getVariable ["ESE_main_var_serverReady", false]) then {
+					hint parseText localize "STR_ese_main_serverNotReady";
+				} else {
+					createDialog "ESE_Main_dialog_MainMenu";
+				};
 				uiSleep 0.1;
 			};
 		};
 
+		waitUntil { missionNamespace getVariable ["ESE_main_var_serverReady", false] };
+		hint parseText localize "STR_ese_main_serverReady";
+
 		/* Music */
 		_this spawn {
-			addMusicEventHandler ["MusicStop", { missionNamespace setVariable ["ESE_Main_var_MusicStopped", true, false] }];
+			addMusicEventHandler ["MusicStop", { missionNamespace setVariable ["ESE_main_var_musicStopped", true, false] }];
 			while { true } do {
 				waitUntil {
-					private _musicSelection = missionNamespace getVariable ["ESE_Main_var_MusicSelection", []];
+					private _musicSelection = missionNamespace getVariable ["ESE_main_var_musicSelection", []];
 					(count _musicSelection) > 0	
 				};
-				private _musicSelection = missionNamespace getVariable ["ESE_Main_var_MusicSelection", []];
+				private _musicSelection = missionNamespace getVariable ["ESE_main_var_musicSelection", []];
 				private _selectionSize = count _musicSelection;
 				private _randomClass = _musicSelection#(floor (random _selectionSize));
 				playMusic _randomClass;
 				3 fadeMusic 1;
-				missionNamespace setVariable ["ESE_Main_var_MusicStopped", false];
+				missionNamespace setVariable ["ESE_main_var_musicStopped", false];
 				waitUntil {
-					private _musicStopped = missionNamespace getVariable ["ESE_Main_var_MusicStopped", false];
-					private _musicSelection = missionNamespace getVariable ["ESE_Main_var_MusicSelection", []];
+					private _musicStopped = missionNamespace getVariable ["ESE_main_var_musicStopped", false];
+					private _musicSelection = missionNamespace getVariable ["ESE_main_var_musicSelection", []];
 					(_musicStopped) || ((count _musicSelection) isEqualTo 0)
 				};
 				3 fadeMusic 0;
-				missionNamespace setVariable ["ESE_Main_var_MusicStopped", true, false];
+				missionNamespace setVariable ["ESE_main_var_musicStopped", true, false];
 				uiSleep 3;
 				playMusic "";
 			};
@@ -78,18 +83,21 @@ if (isServer) then {
 	missionNamespace setVariable ["ESE_main_var_serverReady", true, true];
 };
 
-missionNamespace setVariable [QVAR(cpostInit), true];
+missionNamespace setVariable ["ESE_main_var_cpostInit", true];
 
 /* Welcome */
 private _first = profileNamespace getVariable ["ESE_main_var_first", true];
 if (_first) then {
-	private _keys = actionKeysNames "User13";
+	private _keys = actionKeysNames (profileNamespace getVariable ["ESE_main_var_userAction", "User13"]);
 	private _second = if !(_keys isEqualTo "") then {
 		format [localize "STR_ese_main_openMenuBR", _keys];
 	} else {
 		""
 	};
-	hint parseText format [localize "STR_ese_main_welcome", profileName, _second];
+
+	private _current = parseNumber ((profileNamespace getVariable ["ESE_main_var_userAction", "User13"]) select [4,2]);
+	private _custom = (localize format ["str_usract_user_%1", _current]);
+	hint parseText format [localize "STR_ese_main_welcome", profileName, _second, _custom];
 	profileNamespace setVariable ["ESE_main_var_first", false];
 	saveProfileNamespace;
 };

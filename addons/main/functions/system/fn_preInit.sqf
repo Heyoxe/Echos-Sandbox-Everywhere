@@ -25,6 +25,6 @@ if (isServer) then {
 		_curator setVariable ["owner", "objNull", true];
 		_curators pushback _curator;
 	};
-	missionNamespace setVariable [QVAR(curators), _curators, true];
+	missionNamespace setVariable ["ESE_main_var_curators", _curators, true];
 };
-missionNamespace setVariable [QVAR(cpreInit), true];
+missionNamespace setVariable ["ESE_main_var_cpreInit", true];

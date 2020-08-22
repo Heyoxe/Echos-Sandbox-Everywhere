@@ -6,8 +6,8 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = { "A3_Ui_F", "ESL_Core_E" };
-        author = "Heyoxe";
-        url = "";
+        author = AUTHOR;
+        url = URL;
     };
 };
 
@@ -30,6 +30,8 @@ class CfgEFunctions {
 				class reInit {};
             };
 			class dialogs {
+				class onCLoad {};
+				class onLBSelChanged {};
 				class onLoadURL {};
 				class onLoad {};
 				class onMouseButtonDown {};
